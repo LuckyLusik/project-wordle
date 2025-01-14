@@ -4,10 +4,7 @@ function GuessInput({ guess, setGuess }) {
   const [newGuess, setNewGuess] = React.useState("");
   const guessSubmit = (event) => {
     event.preventDefault();
-    setGuess([
-      ...guess,
-      { id: crypto.randomUUID(), value: newGuess.toUpperCase() },
-    ]);
+    setGuess([...guess, newGuess.toUpperCase()]);
     setNewGuess("");
   };
   return (
