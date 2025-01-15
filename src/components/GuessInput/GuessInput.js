@@ -2,6 +2,7 @@ import React from "react";
 
 function GuessInput({ guess, setGuess }) {
   const [newGuess, setNewGuess] = React.useState("");
+
   const guessSubmit = (event) => {
     event.preventDefault();
     setGuess([...guess, newGuess.toUpperCase()]);
